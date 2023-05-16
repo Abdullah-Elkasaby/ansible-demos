@@ -1,0 +1,8 @@
+- name: installing package
+  apt:
+    name: "{{ package }}"
+    state: latest
+    # to always see change for testing
+  changed_when: true
+  notify: template_handler
+  

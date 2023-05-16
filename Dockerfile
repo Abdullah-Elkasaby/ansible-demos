@@ -1,7 +1,8 @@
 FROM ubuntu
 
 # sudo is added to be used later for installing and managing services
-RUN apt update -y && apt install ssh -y && apt install sudo -y 
+RUN apt update -y && apt install ssh -y && apt install sudo -y
+RUN apt install python3 -y
 
 # the user ansible is added to the sudoers
 RUN adduser ansible

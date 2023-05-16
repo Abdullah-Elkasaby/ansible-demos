@@ -1,22 +1,8 @@
 - name: lab play
   hosts: web_server
-  tasks:
-  - name: update-cache
-    ansible.builtin.apt:
-      update_cache: true
-      name: nginx
-      state: latest
+  roles: 
+  - webserver
 
-  - name: copy index into nginx folder
-    ansible.builtin.copy:
-      src: ./index.html
-      dest: /var/www/html/index.html
-
-
-  - name: restart nginx 
-    ansible.builtin.sysvinit:
-      name: nginx
-      state: restarted
 
 
 

@@ -1,0 +1,5 @@
+package: nginx
+msg: "Hey from ITI ansible demos!"
+files: 
+  - file1
+  - file2
